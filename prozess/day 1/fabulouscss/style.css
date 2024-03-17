@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Lithops-Regular";
+    src: url("/tag1/fabulouscss/Lithops-Regular.woff2") format("woff2");
+}
+
+/*-----Tags----*/
+body{
+    padding: 100px;
+    background-color: black;
+}
+
+h1{
+    color: white;
+    font-family: 'Lithops-Regular';
+    font-size: 80px;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.name{
+    font-size: 10px;
+}
+
+/*-----ID----*/
+#poetry{
+    text-align: right;
+    margin: 80px;
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    border: 3px solid white;
+    padding: 50px;
+}
+
+/*-----Klassen----*/
+.first{
+    color: blue;
+}
+.second{
+    color: blueviolet;
+}
+.third{
+    color: violet;
+}

@@ -1,0 +1,89 @@
+/** BACKGROUND**/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/** TEXTFARBE **/
+#poster {
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    background-color: #000526;
+    padding: 2%;
+}
+
+
+/** INTRO**/
+#info {
+    display: flex;
+    font-size: 1em;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 10%;
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+}
+
+h1 {
+    padding-left: 2%;
+    font-size: 2.5em;
+}
+
+/** GRID für PFEILE **/
+#grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);/* Creates 6 columns */
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/** PFEILE VIOLETT**/
+.arrow {
+    background-color: #ce00c3;
+    width: 6em;
+    height: 6em;
+    clip-path: polygon(0% 25%, 0% 100%, 75% 100%, 75% 75%, 45% 75%, 100% 19%, 81% 0%, 26% 55%, 26% 25%);
+}
+
+.arrowWhite {
+    background-color: #ffffff;
+    width: 6em;
+    height: 6em;
+    clip-path: polygon(0% 25%, 0% 100%, 75% 100%, 75% 75%, 45% 75%, 100% 19%, 81% 0%, 26% 55%, 26% 25%);
+}
+
+/** WEITERE PFEILE AB 36 **/
+@media screen and (max-width: 834px) {
+    .arrow:nth-child(n+37) {
+        display: none;
+    }
+    
+}
+
+/** RESPONSIVES DESIGN - DESKTOP **/
+@media screen and (min-width: 835px) {
+    #info {
+        font-size: 1.5em;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    .arrow {
+        width: 6em;
+        height: 6em;
+    }
+    .arrowWhite {
+        width: 6em;
+        height: 6em;
+        background-color: #ce00c3;
+    }
+
+    #grid {
+        grid-template-columns: repeat(10, 1fr);
+    }
+    
+}

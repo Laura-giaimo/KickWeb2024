@@ -1,0 +1,344 @@
+/** FONTs **/
+/** Babas Neue **/
+.bebas-neue-regular {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/** GEO **/
+@font-face {
+    font-family: 'Geo';
+    src: url(/homework26feb24/geo.regular.ttf);
+}
+
+/** General **/
+body {
+    display: flex;
+    justify-content: center;
+    /*background: radial-gradient(circle at 50% 40%, #484848, #000000);*/
+}
+
+/** Plakattgrösse **/
+#plakat {
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid blue;
+    /*Proportionen A-Formate 1.4141 --*/
+    height: calc(1.4141*60vw);
+    width: 60vw;
+    background: radial-gradient(circle at 50% 40%, #484848, #000000);
+
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*border: 1px solid green;*/
+}
+
+/** Text nur Kontur -- CHANGE -- **/
+.main {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    /** Nur die Kontur des Textes **/
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 3px #000000;
+    text-shadow: 2px 2px 10px #ffffff;
+    /*border: 1px solid red;*/
+}
+
+/** Text nur Kontur --OF -- **/
+.main2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10vw;
+    margin: 0;
+    display: flex;
+    /** Nur die Kontur des Textes **/
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    text-shadow: 2px 2px 200px #ff3300;
+    rotate: 45deg;
+    justify-content: center;
+    /*border: 1px solid orange;*/
+}
+
+/** Text nur Kontur -- PERSPECTIVE -- **/
+/*.main3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10vw;
+    margin: 0;
+    display: flex;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px #ffffff;
+    line-height: 90%;
+    rotate: -180deg;
+}*/
+
+/** Text 3D Shadow -- PERSPECTIVE -- **/
+.main3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 10vw;
+    margin: 0;
+    display: flex;
+    rotate: -180deg;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191,
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+        1px 18px 6px rgba(16, 16, 16, 0.4),
+        1px 22px 10px rgba(16, 16, 16, 0.2),
+        1px 25px 35px rgba(16, 16, 16, 0.2),
+        1px 30px 60px rgba(16, 16, 16, 0.4);
+}
+
+/** Text Vertical **/
+.vertical {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    font-family: 'Geo';
+    font-stretch: extra-expanded;
+    font-size: 2.5vw;
+    font-weight: 700;
+    color: #ff3300;
+    margin-right: 8vw;
+    height: calc(1.4141*60vw);
+    /** Proportionen A-Formate 1.4141 **/
+    text-align: center;
+    /*border: 1px solid violet;*/
+}
+
+/** Position Eye (left)**/
+.box1 {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    margin-top: 5vw;
+    margin-left: 5vw;
+    /*border: 1px solid yellow;*/
+
+}
+
+/** Position Eye (right)**/
+.box2 {
+    display: flex;
+    align-items: flex-end;
+    margin: 0;
+    margin-bottom: 7vw;
+    margin-right: -1vw;
+    /*border: 1px solid white;*/
+}
+
+/** Eye (right) **/
+.container {
+    height: 8vw;
+    width: 8vw;
+    display: inline-block;
+    perspective: 32vw;
+    perspective-origin: 50% 50%;
+}
+
+.eye {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    background: radial-gradient(circle at 50% 40%, #feab66, #ff3300 66%, #9b5050 100%);
+    border-radius: 50%;
+    box-shadow: rgba(124, 124, 124, 0.2) 0px 5px 20px 0px inset;
+}
+
+.eye:after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-1.6vw) translateY(-1.6vw) skewX(-20deg);
+}
+
+.pupil {
+    width: 40%;
+    height: 40%;
+    margin: 30%;
+    border-radius: 100%;
+    position: absolute;
+    background: radial-gradient(circle at 50% 50%, #090e12 0%, #333333 30%, #090e12 100%);
+    transform: translateX(1.6vw) translateY(-1.6vw) skewX(15deg) skewY(2deg);
+}
+
+.pupil:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 37.5%;
+    height: 37.5%;
+    border-radius: 100%;
+    top: 31.25%;
+    left: 31.25%;
+    background: #ffffff;
+}
+
+.pupil:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 31.25%;
+    height: 31.25%;
+    border-radius: 100%;
+    top: 18.75%;
+    left: 18.75%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/** Eye (left) 
+.container {
+    height: 200px; 
+    width: 200px; 
+    display: inline-block;
+    perspective: 400px;
+    perspective-origin: 50% 50%;
+}
+
+.eye {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    background: radial-gradient(circle at 50% 40%, #feab66, #ff3300 66%, #9b5050 100%);
+    border-radius: 50%;
+    box-shadow: rgba(124, 124, 124, 0.2) 0px 10px 40px 0px inset; 
+}
+
+.eye:after {
+    content: '';
+    position: absolute;
+    top: -5%;
+    left: -10%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-20px) translateY(-20px) skewX(-20deg);
+}
+
+
+.pupil {
+    width: 40%;
+    height: 40%;
+    margin: 30%;
+    border-radius: 100%;
+    position: absolute;
+    background: radial-gradient(circle at 50% 50%, #090e12 0%, #333333 30%, #090e12 100%);
+    transform: translateX(20px) translateY(-20px) skewX(15deg) skewY(2deg);
+}
+
+.pupil:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 37.5%;
+    height: 37.5%;
+    border-radius: 100%;
+    top: 31.25%;
+    left: 31.25%;
+    background: #ffffff;
+}
+
+.pupil:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 31.25%;
+    height: 31.25%;
+    border-radius: 100%;
+    top: 18.75%;
+    left: 18.75%;
+    background: rgba(255, 255, 255, 0.2);
+}
+**/
+
+/** Eye (left) **/
+.container1 {
+    height: 10vw;
+    width: 10vw;
+    display: inline-block;
+    perspective: 34vw;
+    perspective-origin: 50% 50%;
+}
+
+.eye1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    background: radial-gradient(circle at 50% 40%, #feab66, #ff3300 66%, #9b5050 100%);
+    border-radius: 50%;
+    box-shadow: rgba(124, 124, 124, 0.2) 0px 5px 20px 0px inset;
+    /* Reduziert der Schatten */
+}
+
+.eye1:after {
+    content: '';
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8) 14%, rgba(255, 255, 255, 0) 24%);
+    transform: translateX(-1.8vw) translateY(-1.8vw) skewX(-20deg);
+    /* Anpassen der Position */
+}
+
+.pupil1 {
+    width: 40%;
+    height: 40%;
+    margin: 30%;
+    border-radius: 100%;
+    position: absolute;
+    background: radial-gradient(circle at 50% 50%, #090e12 0%, #333333 30%, #090e12 100%);
+    transform: translateX(-1.8vw) translateY(1.8vw) skewX(15deg) skewY(2deg);
+    /* Anpassen der Position */
+}
+
+
+.pupil1:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 37.5%;
+    height: 37.5%;
+    border-radius: 100%;
+    top: 31.25%;
+    left: 31.25%;
+    background: #ffffff;
+}
+
+.pupil1:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 31.25%;
+    height: 31.25%;
+    border-radius: 100%;
+    top: 18.75%;
+    left: 18.75%;
+    background: rgba(255, 255, 255, 0.2);
+}

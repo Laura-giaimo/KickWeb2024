@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+:root {
+    /* CSS Angaben über Custom Properties definieren, -> zentraler Ort, um Werte zu ändern */
+    --white: #fff;
+    --background: #e4007b;
+    --dark: #6d0039;
+    --bright: #c10069;
+    --medium: #a00058;
+    --grey:#666666;
+}
+
+body{
+    font-family: 'Roboto';
+    background-color: var(--grey);
+    display: flex;
+    justify-content: center;
+}
+
+#plakat{
+    background-color: var(--white); 
+    width:60vw;
+    /*Proportionen A-Formate 1.4141--*/
+    height:calc(1.4141*60vw);
+}
+
+section.dotrow {
+    background-color: var(--background);
+    padding: 3em;
+   /*---Tipp mit flexbox arbeiten --*/;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+section.konzertinfo{
+    display: flex;
+    justify-content: space-around;
+    color: var(--grey);
+    margin-bottom: 2vw;
+    margin-top: -4vw;
+}
+
+section.musicstyles{
+    display: flex;
+    justify-content: space-around;
+    color: var(--grey);
+    margin-bottom: 2vw;
+}
+
+.dot {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: var(--white);
+    margin: 5px;
+}
+
+.dot1 {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: var(--bright);
+    margin: 5px;
+}
+
+.dot2 {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    background-color: var(--medium);
+    margin: 5px;
+}
+
+.titel{
+    font-size: 5.5vw;
+    color: var(--grey);
+    margin: 0;
+    display: flex;
+    text-align: center;
+    line-height: 7vw;
+}
