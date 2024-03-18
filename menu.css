@@ -20,7 +20,7 @@
     text-decoration: none;
     text-align: center;
   }
-  #hamitems a:hover { background: #af0d0d; }
+  #hamitems a:hover { background: #00ff26; }
   
   /* (C) HIDE HAMBURGER */
   #hamnav label, #hamburger { display: none; }
@@ -41,7 +41,7 @@
     #hamnav label { 
       display: inline-block; 
       color: white;
-      background: #a02620;
+      background: #00ff26;
       font-style: normal;
       font-size: 1.2em;
       padding: 10px;
