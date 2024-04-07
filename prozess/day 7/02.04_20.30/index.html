@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint 2 - CSS Animation</title>
+    <link rel="stylesheet" href="plakat.css">
+</head>
+
+<body>
+    <!-- AUDIO IMPORT -->
+    <audio id="audio1">
+        <source src="/homework02apr24/sound/train.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio2">
+        <source src="/homework02apr24/sound/call-to-attention.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio3">
+        <source src="/homework02apr24/sound/info.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio4">
+        <source src="/homework02apr24/sound/call-to-attention.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <audio id="audio5">
+        <source src="/homework02apr24/sound/train.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- JavaScript FOR AUDIO -->
+    <script>
+        const audio1 = document.getElementById('audio1');
+        const audio2 = document.getElementById('audio2');
+        const audio3 = document.getElementById('audio3');
+
+        audio1.addEventListener('ended', () => {
+            audio2.play();
+        });
+
+        audio2.addEventListener('ended', () => {
+            audio3.play();
+        });
+
+        audio3.addEventListener('ended', () => {
+            audio4.play();
+        });
+
+        audio4.addEventListener('ended', () => {
+            audio5.play();
+        });
+
+        audio5.addEventListener('ended', () => {
+        });
+
+        audio1.play(); // Starte die Wiedergabe der ersten Audiodatei
+    </script>
+
+
+    <!-- HTML-->
+    <div id="poster">
+        <h1 class="heading">the velvet</h1>
+        <div class="containerUnderground">
+            <img src="/homework26mar24/svg's/Underground.png" alt="underground" class="underground">
+        </div>
+        <div class="containerArrow">
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+            <div class="arrow"></div>
+        </div>
+        <div id="info">
+            <p class="first">first appearance in london<br />the london college of printing</p>
+            <p class="second">with spring and polyfloskin<br />plus the great western light show</p>
+            <p class="third">thursday<br />october 14 1971 / 8pm</p>
+        </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

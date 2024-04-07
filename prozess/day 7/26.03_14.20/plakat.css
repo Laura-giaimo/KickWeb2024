@@ -1,0 +1,376 @@
+/** BACKGROUND**/
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/** TEXTFARBE **/
+#poster {
+    color: #ffffff;
+    justify-content: center;
+    align-items: center;
+    background-color: #000526;
+    padding: 2%;
+}
+
+
+/** INTRO**/
+#info {
+    display: flex;
+    font-size: 1em;
+    justify-content: space-between;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 5%;
+    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #ffffff;
+}
+
+/** HEADER **/
+.heading {
+    font-size: 2.5em;
+    padding-left: 5%;
+    animation-name: flashAnimation;
+    animation-duration: 1s;
+    animation-iteration-count: 5;
+}
+
+@keyframes flashAnimation {
+    0% {
+        color: #ffffff;
+    }
+
+    50% {
+        color: #CE00C3;
+    }
+
+    100% {
+        color: #ffffff;
+    }
+}
+
+/** UNDERGROUND LOGO **/
+.underground {
+    width: 60%;
+    margin: 0 auto;
+
+    /** LOGO ANIMATION **/
+    opacity: 0;
+    animation-name: appearLogo;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+@keyframes appearLogo {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.containerUnderground {
+    display: flex;
+    padding: 2%;
+    animation-name: rotateTwice;
+    animation-delay: 6s;
+    animation-duration: 2s; 
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+}
+
+@keyframes rotateTwice {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+
+.variable {
+    display: none;
+}
+
+/** GRID für PFEILE **/
+#grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Creates 6 columns */
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0.5rem;
+    grid-row-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/** PFEILE VIOLETT**/
+.arrow {
+    background-color: #ce00c3;
+    width: 6em;
+    height: 6em;
+    clip-path: polygon(0% 25%, 0% 100%, 75% 100%, 75% 75%, 45% 75%, 100% 19%, 81% 0%, 26% 55%, 26% 25%);
+    animation: flip 4s infinite;
+}
+
+/* Keyframes für die Flip-Animation */
+@keyframes flip {
+    0% {
+        transform: scaleX(1); /* Normal */
+    }
+    50% {
+        transform: scaleX(-1); /* Vertikal gespiegelt */
+    }
+    100% {
+        transform: scaleX(1); /* Wieder normal */
+    }
+}
+
+
+
+
+/** WEITERE PFEILE AB 36 **/
+@media screen and (max-width: 769px) {
+    .arrow {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .arrow:nth-child(n+37) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .arrow:nth-child(n+49) {
+        display: none;
+    }
+}
+
+/** HOVER EFFEKT PFEILE**/
+.arrow:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    /*background: linear-gradient(to left, #ffffff, #f395ff, #ce00c3, #8E37D7);*/
+    background: #ffffff;
+}
+
+/** RESPONSIVES DESIGN - DESKTOP **/
+@media screen and (min-width: 1025px) {
+
+    #info {
+        font-size: 1.5em;
+        border-bottom: none;
+        border-top: none;
+    }
+
+
+    .variable {
+        display: block;
+        border-bottom: 7px solid #ffffff;
+        margin-top: -10%;
+    }
+
+    .the {
+        color: #ce00c3;
+        font-size: 3em;
+    }
+
+    .underground {
+        color: #ffffff;
+        font-size: 6em;
+        margin-top: -3%;
+    }
+
+
+    .arrow {
+        width: 6em;
+        height: 6em;
+    }
+
+    #grid {
+        grid-template-columns: repeat(10, 1fr);
+        padding-bottom: 4.5em;
+        padding-top: 3em;
+        border-bottom: 7px solid #ffffff;
+    }
+
+}
+
+/** RESPONSIVES DESIGN - TABLET **/
+@media screen and (max-width: 769px) and (min-width: 641px) {
+    body {
+        background-color: #000526;
+
+    }
+
+    #info {
+        font-size: 0.8em;
+        display: grid;
+        border-bottom: none;
+        border-top: none;
+        border-left: 2px solid #ffffff;
+        border-right: 2px solid #ffffff;
+        margin-right: 50%;
+        position: absolute;
+        background-color: #000526;
+        z-index: 1;
+        top: 40%;
+        right: -40%;
+    }
+
+
+    /** HEADER **/
+    .heading {
+        font-size: 2em;
+        padding-left: 5%;
+        animation-name: flashAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: 5;
+    }
+
+    @keyframes flashAnimation {
+        0% {
+            color: #ffffff;
+        }
+
+        50% {
+            color: #CE00C3;
+        }
+
+        100% {
+            color: #ffffff;
+        }
+    }
+
+    .arrow {
+        width: 4em;
+        height: 4em;
+    }
+
+}
+
+/** RESPONSIVES DESIGN - SMARTPHONE **/
+@media screen and (max-width: 640px) {
+    body {
+        background-color: #000526;
+
+    }
+
+    #info {
+        font-size: 0.7em;
+        display: flex;
+        justify-content: space-between;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        position: absolute;
+        background-color: #000526;
+        z-index: 1;
+        top: 16.8%;
+        width: 90%;
+    }
+
+
+    #grid {
+        grid-template-columns: repeat(4, 1fr);
+        padding-bottom: 3em;
+        padding-top: 1em;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    /** HEADER **/
+    .heading {
+        font-size: 1.8em;
+        padding-left: 5%;
+        animation-name: flashAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: 5;
+    }
+
+    @keyframes flashAnimation {
+        0% {
+            color: #ffffff;
+        }
+
+        50% {
+            color: #CE00C3;
+        }
+
+        100% {
+            color: #ffffff;
+        }
+    }
+
+    .arrow {
+        width: 7em;
+        height: 7em;
+    }
+
+}
+
+/** RESPONSIVES DESIGN - SMARTPHONE 2 **/
+@media screen and (max-width: 530px) {
+    body {
+        background-color: #000526;
+
+    }
+
+    #info {
+        font-size: 0.7em;
+        display: grid;
+        justify-content: space-between;
+        border-top: 2px solid #ffffff;
+        border-bottom: 2px solid #ffffff;
+        position: absolute;
+        background-color: #000526;
+        z-index: 1;
+        top: 16.8%;
+        width: 90%;
+    }
+
+
+    #grid {
+        grid-template-columns: repeat(4, 1fr);
+        padding-bottom: 3em;
+        padding-top: 1em;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    /** HEADER **/
+    .heading {
+        font-size: 1.8em;
+        padding-left: 5%;
+        animation-name: flashAnimation;
+        animation-duration: 1s;
+        animation-iteration-count: 5;
+    }
+
+    @keyframes flashAnimation {
+        0% {
+            color: #ffffff;
+        }
+
+        50% {
+            color: #CE00C3;
+        }
+
+        100% {
+            color: #ffffff;
+        }
+    }
+
+    .arrow {
+        width: 7em;
+        height: 7em;
+    }
+
+}
+
