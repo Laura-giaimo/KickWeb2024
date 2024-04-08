@@ -289,10 +289,12 @@ body {
 /** RESPONSIVES DESIGN - DESKTOP **/
 @media screen and (min-width: 1025px) {
 
+
     #info {
         font-size: 1.5em;
         border-bottom: none;
         border-top: none;
+        margin-top: -20%;
     }
 
 
@@ -311,6 +313,10 @@ body {
         left: 50%;
         height: 50vh;
     }
+
+    #info{
+        margin-top: -20%;
+    }
 }
 
 /** RESPONSIVES DESIGN - SMARTPHONE **/
@@ -323,11 +329,13 @@ body {
         font-size: 0.8em;
         border-bottom: none;
         border-top: none;
+        margin-top: -20%;
+        
     }
 
     .containerArrow {
         position: absolute;
-        top: 20%;
+        top: 40%;
         left: 50%;
         height: 50vh;
     }
